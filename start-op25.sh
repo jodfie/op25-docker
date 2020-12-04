@@ -1,0 +1,1 @@
+docker-compose run -rm -name OP25 "sh ./config/op25.sh"
