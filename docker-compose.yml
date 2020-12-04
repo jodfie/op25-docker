@@ -1,0 +1,10 @@
+version: "3.8"
+services:
+  op25:
+    image: "nebraskacoder/op25-docker:latest"
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./config:/op25/op25/gr-op25_repeater/apps/config
+    devices:
+      - "/dev:/dev"
