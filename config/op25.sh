@@ -1,1 +1,1 @@
-./rx.py --nocrypt --args "rtl" --gains 'lna:36' -S 960000 -X -q 0 -v 1 -2 -V -U -T ./config/trunk.tsv -l "http:0.0.0.0:8080" 2> ./config/stderr.2
+./rx.py --nocrypt --args "rtl" --gains 'lna:36' -S 960000 -X -q 0 -v 1 -2 -V -U -T ./config/trunk.tsv -l "http:0.0.0.0:8080" 1> ./config/stdout.1 2> ./config/stderr.2

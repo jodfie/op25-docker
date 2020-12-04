@@ -1,0 +1,1 @@
+tail -f ./config/stdout.1
