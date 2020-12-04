@@ -42,6 +42,4 @@ RUN ldconfig
 
 WORKDIR /op25/op25/gr-op25_repeater/apps
 
-EXPOSE 8080
-
 CMD ["sh", "config/op25.sh"]
