@@ -10,5 +10,4 @@ services:
       - ./config:/op25/op25/gr-op25_repeater/apps/config
     devices:
       - "/dev/bus/usb:/dev/bus/usb" # This may present security issues if you are worried about code breaking out of the container.
-      - "/dev/audio:/dev/audio"
-      - "/dev/dsp:/dev/dsp"
+      - "/dev/snd"
