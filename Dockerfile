@@ -7,7 +7,7 @@ FROM python:slim-buster
 # Set up LSIO Image
 RUN \
   echo "**** install packages ****" && \
-  apk add --no-cache \
+  sudo apt install \
     faenza-icon-theme \
     faenza-icon-theme-xfce4-appfinder \
     faenza-icon-theme-xfce4-panel \
