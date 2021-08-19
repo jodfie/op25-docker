@@ -1,1 +1,1 @@
-docker-compose run --rm -p 8080:8080 --name OP25 op25 sh ./config/op25.sh
+docker-compose run --rm -p 9999:8080 --name OP25 op25 sh ./config/op25.sh

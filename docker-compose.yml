@@ -1,13 +1,20 @@
 version: "3.4"
 services:
   op25:
-    build: .
+    image: jodfie/op25-docker:latest
     stdin_open: true
     tty: true
-    ports:
-      - "8080:8080" # Change this to reflect the http port being used.
-    volumes:
-      - ./config:/op25/op25/gr-op25_repeater/apps/config
     devices:
-      - "/dev/bus/usb:/dev/bus/usb" # This may present security issues if you are worried about code breaking out of the container.
+      - "/dev/bus/usb:/dev/bus/usb"
       - "/dev/snd"
+    environment: 
+      - TZ=${TZ}
+      - PGID=${PGID}
+      - PUID=${PUID}
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - ${DOCKERCONFDIR}/op25/config:/op25/op25/gr-op25_repeater/apps/config
+      - ${DOCKERCONFDIR}/op25/pi25:/op25/op25/gr-op25_repeater/apps/pi25
+    ports:
+      - "9999:8080"
+    restart: unless-stopped
