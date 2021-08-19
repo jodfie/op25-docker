@@ -1,8 +1,8 @@
-############# This Section is for setting up LSIO Container ##########
+############# This Section is for setting up Base Container ##########
 
-# Use LSIO ARMHF RDesktop Alpine as base image
+# Use Python Slim Buster as base image
 
-FROM lsiobase/rdesktop-web:arm32v7-alpine
+FROM python:slim-buster
 
 # Set up LSIO Image
 RUN \
@@ -16,7 +16,6 @@ RUN \
     thunar \
     xfce4 \
     xfce4-terminal && \
-  apk add --no-cache --repository=http://dl-cdn.alpinelinux.org/alpine/edge/testing \
     xfce4-pulseaudio-plugin && \
   echo "**** cleanup ****" && \
   rm -rf \
