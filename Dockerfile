@@ -21,8 +21,6 @@ RUN \
   echo "**** cleanup ****" && \
   rm -rf \
     /tmp/*
-# add local files
-COPY /root /
 
 # ports and volumes
 EXPOSE 3000
